@@ -150,7 +150,7 @@ Of the `r dim(activities_tidy)[1] * dim(activities_tidy)[2]` values in the raw t
 # summary(x0) # we can see we have some NA's
 # mean(is.na(x0)) # is that missing data a problem?
 # mean(is.na(activities_raw))
-filter(activities_tidy, is.na(activities_tidy$Avg.Cadence))
+filter(activities_tidy, is.na(activities_tidy$Avg.Cadence_1))
 ```
 
 ## Outliers
@@ -241,7 +241,7 @@ activities_tidy %>%
   geom_smooth()
 
 # correlation
-cor(activities_tidy$vo2max, activities_tidy$Avg.Cadence, use = "pairwise.complete.obs")
+cor(activities_tidy$vo2max, activities_tidy$Avg.Cadence_1, use = "pairwise.complete.obs")
 ```
 
 
